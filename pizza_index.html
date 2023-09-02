@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link rel="stylesheet" href="pizza.css">
+</head>
+<body>
+    <!-- <img src="pizza-img.jpg" alt="Your Image" width="300" height="200"> -->
+    <header>
+        <h2>Order Happy Pizza</h2>
+    </header>
+    <main>
+        <h3>Enter Details</h3><br>
+        <form id="userDetailsForm">
+            <div class="input-section">
+                <label>Email / Mobile:</label>
+                <input type="text" name="contact" id="contact" required>
+            </div><br>
+            <div class="input-section">
+                <label>Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <button id="userDetailsSubmit" type="button" disabled>Submit</button>
+        </form>
+    </main>
+
+    <script>
+        const contactInput = document.getElementById('contact');
+        const passwordInput = document.getElementById('password');
+        const submitButton = document.getElementById('userDetailsSubmit');
+
+        // Enable the submit button only if contact and password are valid
+        contactInput.addEventListener('input', validateUserDetails);
+        passwordInput.addEventListener('input', validateUserDetails);
+
+        function validateUserDetails() {
+            if (contactInput.value && passwordInput.value) {
+                submitButton.removeAttribute('disabled');
+            } else {
+                submitButton.setAttribute('disabled', 'true');
+            }
+        }
+
+        submitButton.addEventListener('click', function () {
+            // Check for valid user details and navigate to the pizza order page
+            if (contactInput.value && passwordInput.value) {
+                window.location.href = 'pizza_order.html'; // Redirect to the pizza order page
+            }
+        });
+    </script>
+</body>
+
+</html>

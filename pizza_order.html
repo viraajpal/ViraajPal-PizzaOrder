@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('your-background-image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow-x: hidden; /* Disable scrolling */
+            overflow-y: auto; /* Disable scrolling */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+} 
+
+header h1 {
+    margin: 0;
+} 
+
+header img {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.input-section {
+    display: grid;
+    gap: 5px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+</style>
+<body>
+    <header>
+        <!-- <h1>Delicious Pizza</h1> -->
+        <img src="pizza11.jpg" alt="Delicious Pizza">
+    </header>
+    <main>
+        <form id="pizzaForm">
+            <!-- Pizza Type -->
+            <div class="input-section">
+                <label>Pizza Type:</label>
+                <input type="radio" name="pizzaType" value="Margherita">Margherita
+                <input type="radio" name="pizzaType" value="Pepperoni">Pepperoni
+                <input type="radio" name="pizzaType" value="Vegetarian">Vegetarian
+                <input type="radio" name="pizzaType" value="Brick Oven">Brick Oven
+                <input type="radio" name="pizzaType" value="Neapolitan">Neapolitan
+                <input type="radio" name="pizzaType" value="Sicilian">Sicilian
+                <input type="radio" name="pizzaType" value="Greek">Greek
+                <input type="radio" name="pizzaType" value="Indian Cottage Cheese">Indian Cottage Cheese
+            </div>
+
+            <!-- Other input fields here... -->
+
+            <button type="submit" id="placeOrderButton">Place Order</button>
+        </form>
+    </main>
+
+    <script>
+        const placeOrderButton = document.getElementById('placeOrderButton');
+
+        placeOrderButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            alert('Order placed successfully!'); // Display success message
+        });
+    </script>
+</body>
+</html>

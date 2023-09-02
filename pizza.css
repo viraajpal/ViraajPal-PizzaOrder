@@ -1,0 +1,53 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    height: 100vh;
+    background-image: url('pizza-img.jpg');
+    background-size: 1160px 690px;
+    /* Set the width and height */
+    background-repeat: no-repeat;
+}
+
+main {
+    margin-top: 20px;
+    /* Add some top margin to the main content */
+    border: 2px solid #333;
+    /* Add a border */
+    border-radius: 10px;
+    /* Add rounded corners */
+    padding: 20px;
+    /* Add some padding */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* Add a subtle shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    /* Display inputs in separate rows */
+    align-items: center;
+    gap: 10px;
+    /* Add some space between elements */
+}
+
+label {
+    width: 150px;
+    /* Set a fixed width for the label */
+}
+
+button#userDetailsSubmit {
+    margin-top: 20px;
+    /* Add some space between the input fields and the button */
+    text-align: center;
+    /* Center the button horizontally */
+}
